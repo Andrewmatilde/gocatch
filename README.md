@@ -3,6 +3,7 @@
 gocatch 是一个生产者消费者模型的并发框架，可以提供给爬虫等项目使用.gocatch依赖于goroutine与sync,time库.
 
 用户需要实现：
+
 	type WorkMachine interface {
 		Work(u *StrStack) ResPipe
 	}
