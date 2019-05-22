@@ -17,12 +17,15 @@ StrStack实现了一个字符串栈
 
 ResPipe是WorkMachine与AnalyzeMachine之间的传输中间件，
 使用
+
 	func (e ResPipe) GetResValueInterface() interface{}
+
 可以取出WorkMachine放入ResPipe中的Res interface{}
 由于go的反射机制非常恶心，取出后需要强制类型转换才能使用.
 
 实现了WorkMachine与AnalyzeMachine接口后
 声明一个manager：
+
 	type Manager struct {
 		WorkLineNum int
 		AnaLineNum  int
@@ -37,6 +40,7 @@ ResPipe是WorkMachine与AnalyzeMachine之间的传输中间件，
 
 	func CreatWorkLineList(m Manager, BreakTime time.Duration) []WorkLine
 	func CreateAnaLineList(m Manager, BreakTime time.Duration) []AnaLine
+
 最后通过
 
 	func RunManager(m Manager, WorkLineList []WorkLine, AnaLineList []AnaLine)
