@@ -47,3 +47,5 @@ ResPipe是WorkMachine与AnalyzeMachine之间的传输中间件，
 
 启动
 所有线程会在所有任务完成后关闭.
+
+在test/main.go中有一个爬虫的样例
